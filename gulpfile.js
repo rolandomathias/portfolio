@@ -1,0 +1,89 @@
+var gulp = require('gulp');
+var less = require('gulp-less');
+var clean = require('gulp-clean');
+var uglify = require('gulp-uglify');
+var cssmin = require('gulp-cssmin');
+var sourcemaps = require('gulp-sourcemaps');
+var path = require('path');
+var rename = require('gulp-rename');
+var flatten = require('gulp-flatten');
+var imagemin = require('gulp-imagemin');
+var autoprefixer = require('gulp-autoprefixer');
+var rigger = require('gulp-rigger');
+
+gulp.task('templates', function() {
+    return gulp.src(['src/templates/**/*.html', '!templates/partials/', '!templates/partials/**'])
+        .pipe(rigger())
+        .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('styles', function() {
+    return gulp.src('src/styles/style.less')
+        .pipe(less())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cssmin({
+            rebase: false
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('dist/css/'));
+});
+
+gulp.task('scripts', function() {
+    return gulp.src('src/scripts/script.js')
+        .pipe(sourcemaps.init())
+        .pipe(rigger())
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist/js/'));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src([
+        'bower_components/**/*.eot',
+        'bower_components/**/*.ttf',
+        'bower_components/**/*.woff',
+        'bower_components/**/*.woff2'
+        ])
+        .pipe(flatten())
+        .pipe(gulp.dest('dist/fonts/'));
+});
+
+
+gulp.task('images', function() {
+    return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
+        .pipe(imagemin())
+        .pipe(flatten())
+        .pipe(gulp.dest('dist/img/'))
+});
+
+gulp.task('clean', function(){
+    return gulp.src('dist/', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('default', ['clean'], function() {
+    gulp.run([
+        'scripts',
+        'styles',
+        'fonts',
+        'images',
+        'templates'
+    ]);
+});
+
+gulp.task('watch', function() {
+
+    gulp.watch('src/styles/**/*.less', ['styles']);
+    gulp.watch('src/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/templates/**/*.html', ['templates']);
+    gulp.watch(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'], ['images']);
+
+});
