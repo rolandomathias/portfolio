@@ -77,10 +77,17 @@ i {
       background-color: @color-placeholder;
       width: 100%;
       max-width: 619px;
-      height: 413px;
+      min-height: 402px;
+      line-height: 0;
+      font-size: 0;
+      /*padding: 35px 0 0 35px;*/
       img {
         max-width: 100%;
+        width: 100%;
       }
+      /*&.img-color-gray {
+        background-color: @color-image-bg-gray;
+      }*/
     }
     h2 {
       font-size: @base-font-size*1.34;
@@ -98,7 +105,7 @@ i {
       margin-bottom: 32px;
     }
     ul.tags {
-      margin: 0 0 43px 0;
+      margin: 0 0 16px 0;
       padding: 0;
       font-size: 0;
       li {
@@ -122,6 +129,7 @@ i {
       font-size: @base-font-size*1.11;
       color: @color-link-dark;
       display: block;
+      margin-top: 43px;
       svg {
         margin-left: 12px;
         transition: transform .4s;
@@ -208,4 +216,10 @@ footer {
   display: inline;
   position: relative;
   box-shadow: inset 0px -9px 0px @color-accent;
+  padding-bottom: 1px;
+  transition: box-shadow .1s;
+  &:hover {
+    box-shadow: inset 0px -4.6rem 0px @color-accent;
+    cursor: pointer;
+  }
 }
