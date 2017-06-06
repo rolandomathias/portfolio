@@ -66,8 +66,8 @@ i {
     max-width: 638px;
     margin: 0 0 170px 0;
     font-weight: 400;
-    span {
-      line-height: @base-font-size*2;
+    .popup-stroke {
+      line-height: @base-font-size*2.4;
     }
   }
 
@@ -214,7 +214,7 @@ footer {
 }
 
 .popup-stroke {
-  display: inline;
+  display: inline-block;
   position: relative;
   box-shadow: inset 0px -9px 0px @color-accent;
   padding-bottom: 1px;
@@ -223,9 +223,12 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    display: none;
+    display: block;
+    visibility: hidden;
     max-width: 166px;
     max-height: 141px;
+    font-size: 0;
+    line-height: 0;
     img {
       width: 100%;
     }
@@ -233,8 +236,10 @@ footer {
   &:hover {
     box-shadow: inset 0px -4.6rem 0px @color-accent;
     cursor: pointer;
-    .hover-image-wrapper {
-      display: block;
-    }
   }
+}
+
+.popup-stroke.hovered .hover-image-wrapper {
+  display: block;
+  visibility: visible;
 }
