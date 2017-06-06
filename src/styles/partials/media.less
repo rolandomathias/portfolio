@@ -21,11 +21,28 @@
     .section {
       margin-bottom: 141px;
       .img {
-        height: 340px;
+        /*height: 340px;*/
+        min-height: 0;
+        background: none;
+        img {
+
+        }
       }
       h2 {
-        margin: 42px 0 32px 0;
+        margin: 42px 0 35px 0;
         top: auto;
+        font-size: @base-font-size*1.17;
+        line-height: @base-font-size*1.5;
+      }
+      p{
+        font-size: @base-font-size*0.88;
+        line-height: @base-font-size*1.4;
+      }
+      a.read-more {
+        margin-top: 24px;
+      }
+      ul.tags {
+        margin-bottom: 24px;
       }
     }
   }

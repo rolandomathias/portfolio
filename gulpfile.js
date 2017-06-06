@@ -60,7 +60,7 @@ gulp.task('fonts', function() {
 gulp.task('images', function() {
     return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
         .pipe(imagemin())
-        .pipe(flatten())
+        //.pipe(flatten())
         .pipe(gulp.dest('docs/img/'))
 });
 
