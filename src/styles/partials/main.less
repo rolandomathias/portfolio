@@ -321,7 +321,7 @@ footer {
   display: inline-block;
   position: relative;
   box-shadow: inset 0px -6px 0px @color-accent;
-  padding-bottom: 1px;
+  /*padding-bottom: 1px;*/
   transition: box-shadow .1s;
   .hover-image-wrapper {
     position: absolute;
@@ -383,4 +383,29 @@ footer {
 
 .p-380-width {
   max-width: 380px;
+}
+
+.about-page {
+  .about-section {
+    p.about-section-lead {
+      .popup-stroke {
+        line-height: @base-font-size*1.65;
+      }
+    }
+  }
+  p {
+    .popup-stroke {
+      line-height: @base-font-size*1.65;
+    }
+  }
+  .img-subtitle {
+    .popup-stroke {
+      line-height: @base-font-size*1.4;
+    }
+  }
+  .intro-paragraphs {
+    .popup-stroke {
+      line-height: @base-font-size*1.5;
+    }
+  }
 }
