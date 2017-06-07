@@ -22,7 +22,6 @@ a:visited {
 }
 
 i {
-  font-family: 'Alegreya', serif;
   font-style: italic;
 }
 
@@ -53,6 +52,22 @@ i {
       display: inline-block;
       margin: 0 10px;
     }
+    li.header-back-link {
+      float: left;
+      a {
+        svg {
+          margin-right: 2px;
+          transition: transform .4s;
+          position: relative;
+          top: -1px;
+        }
+        &:hover {
+          svg {
+            transform: translateX(-10px);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -68,6 +83,16 @@ i {
     font-weight: 400;
     .popup-stroke {
       line-height: @base-font-size*2.4;
+    }
+  }
+
+  .intro-paragraphs {
+    font-size: @base-font-size*1.11;
+    line-height: @base-font-size*1.66;
+    max-width: 619px;
+    margin-bottom: 100px;
+    p {
+
     }
   }
 
@@ -144,7 +169,82 @@ i {
       display: block;
       font-size: @base-font-size*0.89;
       line-height: @base-font-size*0.89;
+      font-family: 'Alegreya', serif;
     }
+  }
+
+  .about-section {
+    text-align: center;
+    font-size: @base-font-size*1.33;
+    line-height: @base-font-size*2;
+    margin-bottom: 160px;
+    .vertical-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        max-width: 300px;
+        text-align: left;
+      }
+    }
+    .col-picture {
+      img {
+
+      }
+      /*&.text-left {
+        text-align: left;
+      }
+      &.text-right {
+        text-align: right;
+      }*/
+    }
+    p.about-section-lead {
+      font-size: @base-font-size*1.33;
+      line-height: @base-font-size*1.86;
+      max-width: 780px;
+      margin: 0 auto 36px auto;
+    }
+
+    .img-subtitle {
+      font-family: "Alegreya", sans-serif;
+      font-size: @base-font-size;
+      line-height: @base-font-size*1.5;
+      margin-top: 25px;
+      text-align: center;
+      padding: 0 25px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    ul.about-gallery {
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      text-align: center;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 0 20px 0;
+        vertical-align: top;
+        img {
+
+        }
+        &:first-child {
+          margin-right: 20px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .img-subtitle.subtitle-gallery {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
   }
 
 }
@@ -242,4 +342,36 @@ footer {
 .popup-stroke.hovered .hover-image-wrapper {
   display: block;
   visibility: visible;
+}
+
+#heart-svg {
+  margin: 0 5px;
+  position: relative;
+  top: 2px;
+  animation: heart 1s infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#portfolio-link {
+  color: @color-link-dark;
+  font-size: @base-font-size*1.1;
+  svg {
+    transition: .4s;
+  }
+  &:hover {
+    svg {
+      transform: translateX(10px);
+    }
+  }
 }
