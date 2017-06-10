@@ -64,6 +64,11 @@ gulp.task('images', function() {
         .pipe(gulp.dest('docs/img/'))
 });
 
+gulp.task('copy', function() {
+   return gulp.src(['src/CNAME'])
+       .pipe(gulp.dest('docs/'));
+});
+
 gulp.task('clean', function(){
     return gulp.src('docs/', {read: false})
         .pipe(clean());
@@ -75,7 +80,8 @@ gulp.task('default', ['clean'], function() {
         'styles',
         'fonts',
         'images',
-        'templates'
+        'templates',
+        'copy'
     ]);
 });
 
