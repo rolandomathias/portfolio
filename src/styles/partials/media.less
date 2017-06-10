@@ -243,3 +243,22 @@
     }
   }
 }
+
+@media (min-width: 769px) {
+  .header {
+    ul {
+      li.header-back-link {
+        a {
+          &:hover {
+            svg {
+              transform: translateX(-10px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .strikethrough:hover:after {
+    width: 100%;
+  }
+}
