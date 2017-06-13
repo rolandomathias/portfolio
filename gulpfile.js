@@ -12,7 +12,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
 
 gulp.task('templates', function() {
-    return gulp.src(['src/templates/**/*.html', '!templates/partials/', '!templates/partials/**'])
+    return gulp.src(['src/templates/**/*.html', '!src/templates/partials/', '!src/templates/partials/**'])
         .pipe(rigger())
         .pipe(gulp.dest('docs/'));
 });
