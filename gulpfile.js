@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('docs/js/'));
 });
 
