@@ -10,6 +10,7 @@ var flatten = require('gulp-flatten');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
+var inlinesource = require('gulp-inline-source');
 
 gulp.task('templates', function() {
     return gulp.src(['src/templates/**/*.html', '!src/templates/partials/', '!src/templates/partials/**'])
@@ -72,6 +73,12 @@ gulp.task('copy', function() {
 gulp.task('clean', function(){
     return gulp.src('docs/', {read: false})
         .pipe(clean());
+});
+
+gulp.task('post-inline', function() {
+   return gulp.src('docs/**/*.html')
+       .pipe(inlinesource())
+       .pipe(gulp.dest('docs/'));
 });
 
 gulp.task('default', ['clean'], function() {
