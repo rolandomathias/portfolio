@@ -11,6 +11,7 @@ var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
 var inlinesource = require('gulp-inline-source');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 gulp.task('templates', function() {
     return gulp.src(['src/templates/**/*.html', '!src/templates/partials/', '!src/templates/partials/**'])
@@ -60,9 +61,13 @@ gulp.task('fonts', function() {
 
 gulp.task('images', function() {
     return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
-        .pipe(imagemin([
-            imagemin.jpegtran({progressive: true})
-        ]))
+        .pipe(imagemin({
+            plugins: [
+                imageminJpegRecompress()
+            ]
+            //imagemin.jpegtran({progressive: true, arithmetic: true}),
+            //imagemin.optipng({optimizationLevel: 5})
+        }))
         //.pipe(flatten())
         .pipe(gulp.dest('docs/img/'))
 });
