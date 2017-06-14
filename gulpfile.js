@@ -63,7 +63,7 @@ gulp.task('images', function() {
     return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
         .pipe(imagemin({
             plugins: [
-                imageminJpegRecompress()
+                imageminJpegRecompress({progressive: true, method: 'smallfry', quality: 'veryhigh'})
             ]
             //imagemin.jpegtran({progressive: true, arithmetic: true}),
             //imagemin.optipng({optimizationLevel: 5})
