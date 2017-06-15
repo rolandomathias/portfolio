@@ -1,14 +1,124 @@
-@media (max-width: @breakpoint-phone-landscape) {
+// Tablets in landscape mode <= 992px
+@media (min-width: @breakpoint-phone-portrait) and (max-width: @breakpoint-tablet) {
 
   .header {
-    padding-top: 103px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  .content {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  .about-page {
+    .intro-paragraphs {
+      font-size: @base-font-size;
+      line-height: @base-font-size*1.5;
+      max-width: 477px;
+    }
+    .content {
+      .about-section {
+        margin-bottom: 110px;
+        .vertical-center {
+          p {
+            font-size: @base-font-size;
+            line-height: @base-font-size*1.5;
+            max-width: 260px;
+          }
+          #iphone_text {
+            max-width: 312px;
+          }
+        }
+        .img-subtitle {
+          font-size: @base-font-size*0.77;
+          line-height: @base-font-size*1.16;
+          &.t-max-200 {
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          &.t-max-260 {
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          br {
+            display: none;
+          }
+        }
+        .col-picture {
+          img {
+            max-width: 310px;
+          }
+          &.full-width-tablets {
+            img {
+              max-width: 100%;
+            }
+          }
+          &.text-left {
+            text-align: left;
+          }
+          &.text-right {
+            text-align: right;
+          }
+          #iphone_pic {
+            max-width: 256px;
+          }
+          &.col-picture-tablet-small {
+            img {
+              max-width: 260px;
+            }
+          }
+        }
+        .about-section-lead {
+          font-size: @base-font-size;
+          line-height: @base-font-size*1.5;
+          margin-bottom: 24px;
+        }
+        .about-gallery {
+          li {
+            img {
+              max-width: 310px;
+            }
+            &.small-tables {
+              img {
+                max-width: 208px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Phone landscape and some tablets portrait <= 736px
+@media (max-width: @breakpoint-phone-portrait) {
+
+  .header {
+    padding-left: 0;
+    padding-right: 0;
     ul {
       text-align: center;
+      li.header-back-link {
+        float: none;
+        text-align: left;
+        display: block;
+        margin: 0 0 43px 0;
+      }
       li {
         margin: 0 39px;
       }
     }
   }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .content {
     padding-top: 103px;
     h1 {
@@ -35,7 +145,7 @@
         font-size: @base-font-size*1.17;
         line-height: @base-font-size*1.5;
       }
-      p{
+      p {
         font-size: @base-font-size*0.88;
         line-height: @base-font-size*1.4;
       }
@@ -50,6 +160,7 @@
       }
     }
   }
+
   footer {
     padding-top: 60px;
     &:after {
@@ -79,28 +190,16 @@
       }
     }
   }
+
   .popup-stroke {
     box-shadow: inset 0px -6px 0px @color-accent;
   }
 
   /* about */
-
   .about-page {
 
     .content {
       padding-top: 60px;
-    }
-
-    .header {
-      padding-top: 35px;
-      ul {
-        li.header-back-link {
-          float: none;
-          text-align: left;
-          display: block;
-          margin: 0 0 43px 0;
-        }
-      }
     }
 
     .about-section {
@@ -112,13 +211,10 @@
         p {
           font-size: @base-font-size;
           line-height: @base-font-size*1.5;
-          /*display: block;
-          text-align: center;
-          max-width: 100%;*/
           display: block;
           max-width: 100%;
           text-align: center;
-          padding: 0 15px;
+          padding: 0;
           margin-top: 0;
           margin-bottom: 25px;
         }
@@ -133,6 +229,7 @@
         .p-380-width {
           max-width: 100%;
         }
+
       }
 
       .p-justify-right {
@@ -152,7 +249,22 @@
         &.d-max-300 {
           max-width: 250px;
         }
+        &.subtitle-gallery {
+          max-width: 100%;
+          padding: 0;
+        }
+        &.d-max-400 {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        &.d-max-550 {
+          max-width: 550px;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
+
       .col-picture {
         text-align: center;
       }
@@ -230,11 +342,99 @@
 
 }
 
+/*
+// Phone portrait <= 736px
 @media (max-width: @breakpoint-phone-portrait) {
 
-}
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-@media (max-width: 320px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header {
+    padding-top: 35px;
+    ul {
+      li.header-back-link {
+        float: none;
+        text-align: left;
+        display: block;
+        margin: 0 0 43px 0;
+      }
+    }
+  }
+
+  .header {
+    ul {
+      text-align: center;
+      li {
+        c
+      }
+    }
+  }
+
+  .about-page {
+
+    .intro-paragraphs {
+      max-width: 100%;
+    }
+
+    .about-section {
+
+
+      .col-picture {
+        img {
+          max-width: 100%;
+        }
+        &.text-left {
+          text-align: center;
+        }
+        &.text-right {
+          text-align: center;
+        }
+      }
+
+    }
+
+    ul.about-gallery {
+      li {
+        margin: 0 0 8px 0;
+        &:first-child {
+          margin: 0 0 8px 0;
+        }
+        &:last-child {
+          margin: 0 0 8px 0;
+        }
+      }
+    }
+
+    .p-justify-right {
+      justify-content: center;
+    }
+
+    .p-justify-left {
+      justify-content: center;
+    }
+
+  }
+
+  .hide-me-mobile {
+    display: none !important;
+  }
+
+  .intro-paragraphs {
+    max-width: 100%;
+  }
+
+}
+*/
+
+// Small phones portrait <= 320px
+@media (max-width: @breakpoint-phone-small) {
   footer {
     .footer-right {
       float: right;
@@ -244,7 +444,9 @@
   }
 }
 
+// Larger than phone landscape and tablets portrait
 @media (min-width: 769px) {
+
   .header {
     ul {
       li.header-back-link {
@@ -258,7 +460,9 @@
       }
     }
   }
+
   .strikethrough:hover:after {
     width: 100%;
   }
+
 }
