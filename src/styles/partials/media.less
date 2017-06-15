@@ -9,6 +9,40 @@
   .content {
     padding-left: 39px;
     padding-right: 39px;
+
+    .section {
+      .img {
+        background-color: white;
+        padding-right: 20px;
+      }
+      p {
+        font-size: @base-font-size*0.88;
+        line-height: @base-font-size*1.33;
+      }
+      ul.tags {
+        li {
+          display: block;
+          font-size: @base-font-size*0.88;
+          line-height: @base-font-size*1.33;
+          &:before {
+            content: "·";
+            color: #6b5658;
+            font-size: 1.602rem;
+            display: inline-block;
+            padding: 0 5px 0 0;
+            line-height: 0;
+          }
+        }
+        li + li:before {
+          padding: 0 5px 0 0;
+        }
+      }
+      i {
+        font-size: @base-font-size*0.77;
+        line-height: @base-font-size;
+      }
+    }
+
   }
 
   .about-page {
@@ -135,6 +169,7 @@
         /*height: 340px;*/
         min-height: 0;
         background: none;
+        max-width: 100%;
         img {
 
         }
