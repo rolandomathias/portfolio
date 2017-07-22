@@ -379,6 +379,14 @@
     }
   }
 
+  .popup-stroke.hovered {
+    .hover-image-wrapper {
+      img {
+
+      }
+    }
+  }
+
   footer {
     padding-top: 100px;
     &:after {
@@ -637,6 +645,21 @@
     }
     .col-section-image {
       /*max-width: 55%;*/
+    }
+  }
+}
+
+
+@media (min-width: @breakpoint-tablet-portrait) {
+  .popup-stroke {
+    position: relative;
+    .hover-image-wrapper {
+      margin: auto;
+      width: auto;
+      padding: 0;
+      img {
+        width: auto;
+      }
     }
   }
 }
