@@ -1,16 +1,71 @@
 // Tablets in landscape mode <= 992px
-@media (min-width: @breakpoint-phone-portrait) and (max-width: @breakpoint-tablet) {
+@media (min-width: @breakpoint-tablet-portrait) and (max-width: 1023px) {
 
   .header {
     padding-left: 39px;
     padding-right: 39px;
+    ul {
+      li {
+        margin: 0 20px;
+      }
+    }
   }
 
   .content {
     padding-left: 39px;
     padding-right: 39px;
 
+    h1 {
+      margin-bottom: 223px;
+      .lead {
+        font-size: 70px;
+        line-height: 63px;
+        margin-bottom: 24px;
+      }
+      .sub-lead {
+        font-size: 41px;
+        line-height: 53.3px;
+        margin-bottom: 24px;
+      }
+      .sub-lead-text {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
     .section {
+
+      .col-section-content {
+        h2 {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        h3 {
+          font-size: 24.3px;
+          line-height: 30.5px;
+        }
+        p {
+          font-size: 17.5px;
+          line-height: 27px;
+        }
+      }
+
+      .col-section-content {
+        padding-right: 0;
+      }
+
+      .col-section-image {
+        display: flex;
+        .img {
+          align-self: center;
+          padding-right: 0;
+        }
+      }
+
+      .col-section-image + .col-section-content {
+        padding-left: 10px;
+      }
+
       .img {
         background-color: white;
         padding-right: 20px;
@@ -18,31 +73,54 @@
       p {
         font-size: @base-font-size*0.88;
         line-height: @base-font-size*1.33;
+        margin-bottom: 16px;
       }
       ul.tags {
+        margin-bottom: 20px;
         li {
-          display: block;
-          font-size: @base-font-size*0.88;
-          line-height: @base-font-size*1.33;
-          &:before {
-            content: "·";
-            color: #6b5658;
-            font-size: 1.602rem;
-            display: inline-block;
-            padding: 0 5px 0 0;
-            line-height: 0;
-          }
-        }
-        li + li:before {
-          padding: 0 5px 0 0;
+          font-size: 14px;
+          line-height: 21px;
         }
       }
       i {
-        font-size: @base-font-size*0.77;
-        line-height: @base-font-size;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .read-more {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 20px;
       }
     }
 
+  }
+
+  .container-section-full-width {
+    .content-full-width {
+      .section {
+        margin-bottom: 143px;
+        .col-section-content {
+          padding-top: 5px;
+        }
+        .col-section-image {
+          padding-left: 20px;
+          .img {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            min-height: 578px;
+            img {
+              position: absolute;
+              left: 0;
+              top: 0;
+              max-width: 10000px;
+              width: 562px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .about-page {
@@ -129,7 +207,7 @@
 }
 
 // Phone landscape and some tablets portrait <= 736px
-@media (max-width: @breakpoint-phone-portrait) {
+@media (max-width: @breakpoint-tablet-portrait) {
 
   .header {
     padding-left: 0;
