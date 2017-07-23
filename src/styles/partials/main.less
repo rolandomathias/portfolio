@@ -315,12 +315,12 @@ i {
       line-height: 0;
       display: inline-block;
       position: relative;
-      img {
+      > img {
         max-width: 460px;
         width: 100%;
       }
       &.free-image {
-        img {
+        > img {
           max-width: 100%;
         }
       }
@@ -650,7 +650,7 @@ footer {
   }
   .intro-paragraphs {
     .popup-stroke {
-      line-height: @base-font-size*1.5;
+      line-height: @base-font-size*1.4;
     }
   }
 
@@ -689,6 +689,15 @@ footer {
       right: -185px;
       top: 30%;
     }
+
+    .image-title-mobile {
+      display: none;
+    }
+
+  }
+
+  .only-mobile {
+    display: none;
   }
 
 }

@@ -29,7 +29,7 @@ $(function(){
                 // Position on mobiles
                 console.log('mobile!');
                 wrapper.css('left', 0);
-                wrapper.css('top', $(this).offset().top + Math.floor($(this).height())+ 10 + 'px');
+                //wrapper.css('top', $(this).offset().top + Math.floor($(this).height())+ 10 + 'px');
             }
 
             $(this).addClass('hovered');
