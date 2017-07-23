@@ -1,7 +1,12 @@
-// Both tablet and mobile
-@media (max-width: 1023px) {
+@media (min-width: 1025px) {
+  .header {
+    height: 100vh;
+    width: 100%;
+  }
   .about-page {
-
+    .header {
+      height: auto;
+    }
   }
 }
 
@@ -16,11 +21,6 @@
         margin: 0 20px;
       }
     }
-  }
-
-  .content {
-    padding-left: 39px;
-    padding-right: 39px;
 
     h1 {
       margin-bottom: 223px;
@@ -47,6 +47,12 @@
         line-height: 27px;
       }
     }
+
+  }
+
+  .content {
+    padding-left: 39px;
+    padding-right: 39px;
 
     .section {
 
@@ -291,6 +297,16 @@
 // Phone landscape and some tablets portrait <= 736px
 @media (max-width: @breakpoint-tablet-portrait) {
 
+  .header {
+    height: 100vh;
+    width: 100%;
+  }
+  .about-page {
+    .header {
+      height: auto;
+    }
+  }
+
   .m-container {
     padding: 0 15px;
   }
@@ -318,12 +334,6 @@
         font-size: 16px;
       }
     }
-  }
-
-  .content {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 70px;
 
     h1 {
       font-size: @base-font-size*1.35;
@@ -352,6 +362,14 @@
         line-height: 24px;
       }
     }
+
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 70px;
+
     .section {
       margin-bottom: 119px;
 
