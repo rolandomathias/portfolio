@@ -133,12 +133,27 @@
   }
 
   .about-page {
-    .intro-paragraphs {
 
+    .leader-image-col {
+      .image-title-left {
+        left: -170px;
+      }
+      .image-title-right {
+        right: -195px;
+      }
     }
+
     .content {
       .about-section {
-        margin-bottom: 110px;
+        margin-bottom: 80px;
+
+         p {
+           .popup-stroke {
+             line-height: 20px;
+             box-shadow: inset 0 -4px 0 #70c186;
+           }
+         }
+
         .vertical-center {
           p {
             font-size: @base-font-size;
@@ -149,9 +164,28 @@
             max-width: 312px;
           }
         }
+
         .img-subtitle {
-          font-size: @base-font-size*0.77;
-          line-height: @base-font-size*1.16;
+          font-size: 15px;
+          line-height: 22.5px;
+          max-width: 152px;
+          left: -172px;
+          bottom: 40%;
+
+          &.special-tablet-1 {
+            left: -172px;
+          }
+
+          &.full-tablet {
+            display: block;
+            left: auto;
+            position: relative;
+            margin: 0;
+            width: 100%;
+            max-width: 422px;
+            right: auto;
+          }
+
           &.t-max-200 {
             max-width: 200px;
             margin-left: auto;
@@ -165,12 +199,27 @@
           br {
             display: none;
           }
+          &.special-last {
+            position: relative;
+            display: block;
+            width: 100%;
+            left: auto;
+            max-width: 308px;
+          }
+          .popup-stroke {
+            line-height: 16px;
+            box-shadow: inset 0 -4px 0 #70c186;
+          }
         }
+
         .col-picture {
           img {
-            max-width: 310px;
+            max-width: 422px;
           }
           &.full-width-tablets {
+            .full-tablet {
+              max-width: 100%;
+            }
             img {
               max-width: 100%;
             }
@@ -193,7 +242,8 @@
         .about-section-lead {
           font-size: @base-font-size;
           line-height: @base-font-size*1.5;
-          margin-bottom: 24px;
+          margin-bottom: 20px;
+          max-width: 422px;
         }
         .about-gallery {
           li {
@@ -202,13 +252,14 @@
             }
             &.small-tables {
               img {
-                max-width: 208px;
+                max-width: 295px;
               }
             }
           }
         }
       }
     }
+
   }
 
   footer {
