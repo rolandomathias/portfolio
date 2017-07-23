@@ -11,8 +11,6 @@ $(function(){
 
             if( !isMobile ) {
 
-                console.log('desktop!');
-
                 // Position it on desktop
                 // Center the image
                 wrapper.css('left', Math.floor($(this).width() / 2) - Math.floor(img.width() / 2) + 'px');
