@@ -53,8 +53,8 @@ $(function(){
         }
     );
 
-    $(document).on('touchend', '.hover-image-wrapper', function(e){
+    /*$(document).on('touchend', '.hover-image-wrapper', function(e){
         $('.popup-stroke').trigger('mouseleave').trigger('mouseout').trigger('blur');
-    });
+    });*/
 
 });
