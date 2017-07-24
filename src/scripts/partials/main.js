@@ -3,6 +3,10 @@ $(function(){
     $('.popup-stroke').hover(
         function() {
 
+            if( $(this).hasClass('hovered') ) {
+                return;
+            }
+
             var isMobile = $(window).width() < 768;
 
             // Hover
@@ -36,6 +40,11 @@ $(function(){
         },
         function() {
             // Blur
+
+            if( !$(this).hasClass('hovered') ) {
+                return;
+            }
+
             $(this).removeClass('hovered');
         }
     );
