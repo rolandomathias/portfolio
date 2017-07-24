@@ -285,8 +285,12 @@
 // Phone landscape and some tablets portrait <= 736px
 @media (max-width: @breakpoint-tablet-portrait) {
 
-  .popup-stroke.hovered {
-    /*pointer-events: none;*/
+  .popup-stroke {
+    &.hovered {
+      .hover-image-wrapper {
+
+      }
+    }
   }
 
   .header {
@@ -455,14 +459,6 @@
             }
           }
         }
-      }
-    }
-  }
-
-  .popup-stroke.hovered {
-    .hover-image-wrapper {
-      img {
-
       }
     }
   }
@@ -720,25 +716,25 @@
       }
     }
 
-    .popup-stroke {
+  }
+
+  .popup-stroke {
+    .hover-image-wrapper {
+      left: 0;
+    }
+    &.hovered {
       .hover-image-wrapper {
+        position: fixed;
         left: 0;
-      }
-      &.hovered {
-        .hover-image-wrapper {
-          position: fixed;
-          left: 0;
-          right: 0;
-          top: 40%;
-          transform: translateY(-40%);
+        right: 0;
+        top: 40%;
+        transform: translateY(-40%);
+        max-width: 100%;
+        img {
           max-width: 100%;
-          img {
-            max-width: 100%;
-          }
         }
       }
     }
-
   }
 
   .hide-me-mobile {

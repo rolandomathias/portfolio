@@ -3,7 +3,7 @@ $(function(){
     $('.popup-stroke').hover(
         function() {
 
-            console.log('hover');
+            //console.log('hover');
 
             if( $(this).hasClass('hovered') ) {
                 return;
@@ -33,7 +33,7 @@ $(function(){
                 }
             }else{
                 // Position on mobiles
-                console.log('mobile!');
+                //console.log('mobile!');
                 wrapper.css('left', 0);
                 //wrapper.css('top', $(this).offset().top + Math.floor($(this).height())+ 10 + 'px');
             }
@@ -43,7 +43,7 @@ $(function(){
         function() {
             // Blur
 
-            console.log('blur');
+            //console.log('blur');
 
             if( !$(this).hasClass('hovered') ) {
                 return;
@@ -52,5 +52,9 @@ $(function(){
             $(this).removeClass('hovered');
         }
     );
+
+    $(document).on('touchend', '.hover-image-wrapper', function(e){
+        $('.popup-stroke').trigger('mouseleave').trigger('mouseout').trigger('blur');
+    });
 
 });
