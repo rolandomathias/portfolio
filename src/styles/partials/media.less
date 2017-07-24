@@ -288,6 +288,7 @@
   .header {
     height: 100vh;
     width: 100%;
+    min-height: 400px;
   }
 
   .about-page {
@@ -329,21 +330,25 @@
       line-height: @base-font-size*2;
       margin-bottom: 190px;
       .lead {
-        font-size: 38px;
+        /*font-size: 38px;*/
+        font-size: 11vw;
         line-height: 45px;
         margin-bottom: 29px;
         .popup-stroke {
           box-shadow: inset 0px -5px 0px @color-accent;
-          line-height: 37px;
+          line-height: 9.5vw;
         }
       }
       .sub-lead {
-        font-size: 28.5px;
-        line-height: 36.5px;
+        /*font-size: 28.5px;*/
+        font-size: 8.5vw;
+        /*line-height: 36.5px;*/
+        line-height: 9.5vw;
         margin-bottom: 21px;
         .popup-stroke {
           box-shadow: inset 0px -5px 0px @color-accent;
-          line-height: 30px;
+          /*line-height: 30px;*/
+          line-height: 7vw;
         }
       }
       .sub-lead-text {
@@ -733,6 +738,27 @@
     display: none !important;
   }
 
+}
+
+@media (max-width: 480px) {
+  .header {
+    h1 {
+      .lead {
+        font-size: 38px;
+        line-height: 45px;
+        .popup-stroke {
+          line-height: 36px;
+        }
+      }
+      .sub-lead {
+        font-size: 28.5px;
+        line-height: 36.5px;
+        .popup-stroke {
+          line-height: 30px;
+        }
+      }
+    }
+  }
 }
 
 // Small phones portrait <= 320px
