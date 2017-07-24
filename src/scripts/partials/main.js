@@ -3,6 +3,8 @@ $(function(){
     $('.popup-stroke').hover(
         function() {
 
+            console.log('hover');
+
             if( $(this).hasClass('hovered') ) {
                 return;
             }
@@ -40,6 +42,8 @@ $(function(){
         },
         function() {
             // Blur
+
+            console.log('blur');
 
             if( !$(this).hasClass('hovered') ) {
                 return;

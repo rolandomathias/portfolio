@@ -285,6 +285,10 @@
 // Phone landscape and some tablets portrait <= 736px
 @media (max-width: @breakpoint-tablet-portrait) {
 
+  .popup-stroke.hovered {
+    /*pointer-events: none;*/
+  }
+
   .header {
     height: 100vh;
     width: 100%;
@@ -744,17 +748,13 @@
   .header {
     h1 {
       .lead {
-        font-size: 38px;
-        line-height: 45px;
         .popup-stroke {
-          line-height: 36px;
+          line-height: 10vw;
         }
       }
       .sub-lead {
-        font-size: 28.5px;
-        line-height: 36.5px;
         .popup-stroke {
-          line-height: 30px;
+          line-height: 8vw;
         }
       }
     }
