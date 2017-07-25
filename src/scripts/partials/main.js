@@ -3,7 +3,7 @@ $(function(){
     $('.popup-stroke').hover(
         function() {
 
-            //console.log('hover');
+            console.log('hover');
 
             if( $(this).hasClass('hovered') ) {
                 return;
@@ -14,6 +14,7 @@ $(function(){
             // Hover
             var wrapper = $(this).find('.hover-image-wrapper');
             var img = $(wrapper).find('img');
+            var imageHeight = $(img).height();
 
             if( !isMobile ) {
 
@@ -21,7 +22,6 @@ $(function(){
                 // Center the image
                 wrapper.css('left', Math.floor($(this).width() / 2) - Math.floor(img.width() / 2) + 'px');
 
-                var imageHeight = $(img).height();
                 var availableSpace = $(this).offset().top;
 
                 if (availableSpace < imageHeight + 20) {
@@ -34,8 +34,9 @@ $(function(){
             }else{
                 // Position on mobiles
                 //console.log('mobile!');
+
                 wrapper.css('left', 0);
-                //wrapper.css('top', $(this).offset().top + Math.floor($(this).height())+ 10 + 'px');
+                wrapper.css('top', Math.floor( ( $(window).scrollTop() + ($(window).height() / 2) ) - ( imageHeight / 2 ) ) + 'px' );
             }
 
             $(this).addClass('hovered');
@@ -43,7 +44,7 @@ $(function(){
         function() {
             // Blur
 
-            //console.log('blur');
+            console.log('blur');
 
             if( !$(this).hasClass('hovered') ) {
                 return;
@@ -52,9 +53,5 @@ $(function(){
             $(this).removeClass('hovered');
         }
     );
-
-    $(document).on('touchstart', function(e){
-        $('.popup-stroke.hovered').trigger('mouseleave').trigger('mouseout').trigger('blur');
-    });
 
 });
