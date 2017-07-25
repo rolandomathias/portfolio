@@ -37,6 +37,7 @@ $(function(){
 
                 wrapper.css('left', 0);
                 wrapper.css('top', Math.floor( ( $(window).scrollTop() + ($(window).height() / 2) ) - ( imageHeight / 2 ) ) + 'px' );
+                wrapper.css('height', imageHeight + 'px' );
             }
 
             $(this).addClass('hovered');
