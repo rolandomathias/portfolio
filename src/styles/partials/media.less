@@ -1,5 +1,5 @@
 // Tablets in landscape mode <= 992px
-@media (min-width: @breakpoint-tablet-portrait) and (max-width: 1023px) {
+@media screen and (min-width: @breakpoint-tablet-portrait) and (max-width: 1023px) {
 
   .header {
     padding-left: 39px;
@@ -144,6 +144,12 @@
       }
     }
 
+    .popup-stroke {
+        .hover-image-wrapper {
+          left: -200px;
+        }
+    }
+
     .content {
       .about-section {
         margin-bottom: 80px;
@@ -284,14 +290,6 @@
 
 // Phone landscape and some tablets portrait <= 736px
 @media (max-width: @breakpoint-tablet-portrait) {
-
-  .popup-stroke {
-    &.hovered {
-      .hover-image-wrapper {
-
-      }
-    }
-  }
 
   .header {
     height: 100vh;
