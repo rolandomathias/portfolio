@@ -3,7 +3,7 @@ $(function(){
     $('.popup-stroke').hover(
         function() {
 
-            console.log('hover');
+            //console.log('hover');
 
             if( $(this).hasClass('hovered') ) {
                 return;
@@ -35,8 +35,12 @@ $(function(){
                 // Position on mobiles
                 //console.log('mobile!');
 
+                //console.log(imageHeight);
+
                 wrapper.css('left', 0);
-                wrapper.css('top', Math.floor( ( $(window).scrollTop() + ($(window).height() / 2) ) - ( imageHeight / 2 ) ) + 'px' );
+                if( !$(this).parents('.img-subtitle').length ) {
+                    wrapper.css('top', Math.floor( ( $(window).scrollTop() + ($(window).height() / 2) ) - ( imageHeight / 2 ) ) + 'px' );
+                }
                 wrapper.css('height', imageHeight + 'px' );
             }
 
@@ -45,7 +49,7 @@ $(function(){
         function() {
             // Blur
 
-            console.log('blur');
+            //console.log('blur');
 
             if( !$(this).hasClass('hovered') ) {
                 return;
