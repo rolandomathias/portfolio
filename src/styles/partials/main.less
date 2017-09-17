@@ -447,11 +447,13 @@ i {
         }
       }
 
-      &.reverse{
-        flex-direction: row-reverse;
-        .about__content-testimonial-text{
-          padding-left: 100px;
-          padding-right: 100px;
+      @media(min-width:768px){
+        &.reverse{
+          flex-direction: row-reverse;
+          .about__content-testimonial-text{
+            padding-left: 100px;
+            padding-right: 100px;
+          }
         }
       }
 

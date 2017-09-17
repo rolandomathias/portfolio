@@ -316,6 +316,155 @@
 // Phone landscape and some tablets portrait <= 736px
 @media (max-width: @breakpoint-tablet-portrait) {
 
+  .about__header-img{
+    visibility: visible;
+    margin:0;
+    width:100%;
+  }
+
+  .about__header-text{
+    position: static;
+  }
+
+  .about__header{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  }
+  .about__content .p-group{
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+.img-group{
+  img{
+    margin: 0!important;
+    margin-top:10px!important;
+    width: 100%!important;
+  }
+}
+
+.about__content-app{
+  max-width: 100%;
+  flex-direction: column-reverse;
+  margin-top: 60px;
+  img{
+    width:100%;
+  }
+}
+
+.about__content-flight{
+  max-width: 100%;
+  flex-direction: column;
+  margin-bottom: 30px;
+  p{
+    max-width: 100%;
+  }
+  svg{
+    width: 80px;
+    height: 130px;
+    float: right;
+    margin:0;
+    margin-top: -30px;
+    margin-left: auto;
+  }
+}
+.about__content-testimonial-text{
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 0px;
+}
+
+.about__content-testimonial-text:before{
+  width: 30px;
+background-size: 100% auto;
+top:18px;
+left:26px;
+}
+
+.about__content-testimonial-text p{
+  line-height: 24px;
+}
+
+ 
+.about__content-testimonial{
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+
+.about__content-testimonial-avatar:before{
+  display: none;
+}
+
+.about__content-testimonial-text span{
+  text-align: left;
+  margin-left: auto;
+  margin-top: -13px;
+  margin-bottom: 30px;
+  max-width: 150px;
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/quotemark.png) center center no-repeat;
+    position: absolute;
+    background-size: 100% auto;
+    top: calc(~"50% - 15px");
+    left: -35px;
+  }
+}
+
+footer{
+  padding: 40px 0 40px!important;
+}
+
+footer .copyright{
+  margin-top:40px;
+}
+
+footer .footer-title{
+  margin-bottom: 30px;
+}
+footer ul{
+  flex-direction: column;
+  li{
+    color:#01192E;
+  }
+}
+
+.about__content-testimonial-avatar{
+  margin-right: auto;
+  margin-bottom: -54px;
+}
+
+
+
+.about__content-testimonial-avatar img{
+  width: 86px;
+}
+
+  .about__content p,.about__content h4{
+    font-size: 16px;
+  }
+
+  .about__content h4{
+    margin:10px 0;
+  }
+  
+
+  .about__header-text h2{
+    font-size: 36px;
+    line-height: 46.8px;
+  }
+
+  .about__header-text h4{
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
   .header {
     height: 100vh;
     width: 100%;
