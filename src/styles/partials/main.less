@@ -702,6 +702,29 @@ footer {
   padding-left: 0;
 }
 
+#case-1{
+  a{
+    width: 90px;
+    color: #f7f7f7;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: block;  
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-top:35px;
+    margin-right: 30px;
+    visibility: hidden;
+    transition: all 0.4s;
+    opacity: 0;
+  }
+
+  &:hover a{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 #heart-svg {
   margin: 0 5px;
   position: relative;
@@ -735,7 +758,7 @@ footer {
 }
 
 .about-page {
-
+    
   .content {
     padding-top: 135px;
   }

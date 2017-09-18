@@ -1,11 +1,19 @@
-$(function(){
+$(function () {
+
+    $('#case-1').on('click', function () {
+        var link = $(this).find('a').attr('href');
+        if ($(window).width() < 992) {
+            var win = window.open(link, '_blank');
+            win.focus();
+        }
+    });
 
     $('.popup-stroke').hover(
-        function() {
+        function () {
 
             //console.log('hover');
 
-            if( $(this).hasClass('hovered') ) {
+            if ($(this).hasClass('hovered')) {
                 return;
             }
 
@@ -16,7 +24,7 @@ $(function(){
             var img = $(wrapper).find('img');
             var imageHeight = $(img).height();
 
-            if( !isMobile ) {
+            if (!isMobile) {
 
                 // Position it on desktop
                 // Center the image
@@ -26,32 +34,32 @@ $(function(){
 
                 if (availableSpace < imageHeight + 20) {
                     // Display at bottom
-                    wrapper.css('bottom', '-' + ( imageHeight + 10 ) + 'px');
+                    wrapper.css('bottom', '-' + (imageHeight + 10) + 'px');
                 } else {
                     // Display at top
                     wrapper.css('bottom', Math.floor($(this).height()) + 5 + 'px');
                 }
-            }else{
+            } else {
                 // Position on mobiles
                 //console.log('mobile!');
 
                 //console.log(imageHeight);
 
                 wrapper.css('left', 0);
-                if( !$(this).parents('.img-subtitle').length ) {
-                    wrapper.css('top', Math.floor( ( $(window).scrollTop() + ($(window).height() / 2) ) - ( imageHeight / 2 ) ) + 'px' );
+                if (!$(this).parents('.img-subtitle').length) {
+                    wrapper.css('top', Math.floor(($(window).scrollTop() + ($(window).height() / 2)) - (imageHeight / 2)) + 'px');
                 }
-                wrapper.css('height', imageHeight + 'px' );
+                wrapper.css('height', imageHeight + 'px');
             }
 
             $(this).addClass('hovered');
         },
-        function() {
+        function () {
             // Blur
 
             //console.log('blur');
 
-            if( !$(this).hasClass('hovered') ) {
+            if (!$(this).hasClass('hovered')) {
                 return;
             }
 
