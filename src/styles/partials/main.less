@@ -379,7 +379,7 @@ i {
         &:before{
           content: '';
           width:3px;
-          background:rgba(109, 115, 111, 0.19);
+          background:rgba(29, 52, 97, 0.29);
           height: 100%;
           display: block;
           position: absolute;
@@ -450,6 +450,13 @@ footer {
   overflow: hidden;
   position: relative;
 
+  .wrap{
+    border-top:2px solid rgba(29, 52, 97, 0.29);
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 
   background-color: @color-footer;
   width: 100%;
@@ -484,13 +491,13 @@ footer {
     margin-left: 220px;
   }
   .footer-links {
-    padding-left: 60px;
+    padding-left: 0px;
   }
  
   .footer-title {
     font-size: 24px;
     line-height: 28.5px;
-    color: white;
+    color:#312038;
     // font-weight: 600;
     margin-bottom: 18px;
     z-index: 2;
@@ -681,6 +688,20 @@ footer {
 .col-section-content h2{
   text-transform: uppercase;
 }
+
+#case-1 .res,#case-2 .res{
+  display: none!important;
+}
+
+.section-row{
+  margin:0;
+}
+
+.col-section-image{
+  padding-right: 0;
+  padding-left: 0;
+}
+
 #heart-svg {
   margin: 0 5px;
   position: relative;
