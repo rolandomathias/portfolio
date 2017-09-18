@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="222px" height="25px" viewBox="0 0 222 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="about-wide" transform="translate(-610.000000, -5137.000000)">
+            <g id="Group" transform="translate(609.000000, 5137.000000)">
+                <g id="footer/handcrafted">
+                    <text id="Handcrafted" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#1D3461">
+                        <tspan x="0" y="18">Handcrafted</tspan>
+                    </text>
+                    <text id="Rolando-Mathias" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#1D3461">
+                        <tspan x="116" y="18">Rolando Mathias</tspan>
+                    </text>
+                    <g id="icon/handcrafted" transform="translate(84.000000, 0.000000)" stroke-width="1" fill-rule="evenodd">
+                        <g id="Design-icon">
+                            <rect id="Rectangle-path" fill="#42A5F5" fill-rule="nonzero" transform="translate(12.500033, 12.500221) rotate(-45.000000) translate(-12.500033, -12.500221) " x="8.52257161" y="-1.19996014" width="7.95492371" height="27.4003622"></rect>
+                            <g id="Group" transform="translate(5.625000, 1.875000)" fill-rule="nonzero" fill="#1565C0">
+                                <rect id="Rectangle-path" transform="translate(2.950127, 3.888233) rotate(-135.000000) translate(-2.950127, -3.888233) " x="2.32513321" y="1.89918936" width="1.24998801" height="3.97808685"></rect>
+                                <rect id="Rectangle-path" transform="translate(12.362935, 12.050304) rotate(45.000000) translate(-12.362935, -12.050304) " x="11.7376288" y="10.9453148" width="1.25061301" height="2.20997881"></rect>
+                                <rect id="Rectangle-path" transform="translate(1.718656, 1.406375) rotate(45.000000) translate(-1.718656, -1.406375) " x="1.09366224" y="0.301385597" width="1.24998801" height="2.20997881"></rect>
+                                <rect id="Rectangle-path" transform="translate(16.131469, 15.818532) rotate(45.000000) translate(-16.131469, -15.818532) " x="15.5064747" y="14.7135431" width="1.24998801" height="2.20997881"></rect>
+                                <rect id="Rectangle-path" transform="translate(5.468656, 5.156313) rotate(45.000000) translate(-5.468656, -5.156313) " x="4.84366224" y="4.0513231" width="1.24998801" height="2.20997881"></rect>
+                                <rect id="Rectangle-path" transform="translate(13.612523, 14.551756) rotate(-44.991897) translate(-13.612523, -14.551756) " x="11.6234794" y="13.9267621" width="3.97808689" height="1.24998802"></rect>
+                            </g>
+                            <path d="M24.114375,3.166875 L21.8325,0.885625 C21.485625,0.538125 20.920625,0.538125 20.573125,0.885625 L19.499375,1.960625 L23.04,5.500625 L24.114375,4.426875 C24.461875,4.07875 24.461875,3.515625 24.114375,3.166875" id="Shape" fill="#E57373" fill-rule="nonzero"></path>
+                            <rect id="Rectangle-path" fill="#FF9800" fill-rule="nonzero" transform="translate(11.543158, 13.455992) rotate(-45.000000) translate(-11.543158, -13.455992) " x="0.291078878" y="10.9522657" width="22.5041592" height="5.00745198"></rect>
+                            <rect id="Rectangle-path" fill="#B0BEC5" fill-rule="nonzero" transform="translate(20.383317, 4.616122) rotate(134.979744) translate(-20.383317, -4.616122) " x="19.1313656" y="2.11221838" width="2.50390319" height="5.00780637"></rect>
+                            <polygon id="Shape" fill="#FFC107" fill-rule="nonzero" points="1.815625 19.643125 0.625 24.375 5.356875 23.18375"></polygon>
+                            <polygon id="Shape" fill="#37474F" fill-rule="nonzero" points="1.228125 21.9825 0.625 24.375 3.016875 23.771875"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
