@@ -1109,6 +1109,21 @@ footer ul{
     padding-left: 3px;
   }
 
+  #case-1 .row{
+    width: 100%;
+  }
+
+  .header h1, .home-header{
+    font-size: 12vw!important;
+    line-height: 12vw!important;
+    max-width: 100%!important;
+  }
+
+  .about__header-text h2{
+    font-size: 11vw;
+    line-height: 11vw;
+  }
+
 }
 
 
@@ -1116,9 +1131,9 @@ footer ul{
   .about__header-text h2{
     font-size: 44px;
   }
-  .header h1{
-    font-size: 50px!important;
-  }
+  // .header h1{
+  //   font-size: 50px!important;
+  // }
 }
 @media (max-width: 480px) {
  
@@ -1140,7 +1155,27 @@ footer ul{
   .content {
     padding-top: 0px;
   }
+
 }
+ 
+
+@media(max-width:400px){
+  .about__header-text h2{
+    font-size: 10.5vw;
+    line-height: 10.5vw;
+  }
+}
+
+
+
+@media(max-width:355px){
+  .header h1, .home-header {
+    font-size: 11vw!important;
+    line-height: 11vw!important;
+    max-width: 100%!important;
+}
+}
+
 
 // Small phones portrait <= 320px
 @media (max-width: @breakpoint-phone-small) {
@@ -1152,9 +1187,10 @@ footer ul{
     }
   }
 
-  .header h1, .home-header {
-    font-size: 38px!important;
-}
+  .header h1{
+    font-size: 11vw!important;
+    line-height: 11vw!important;
+  }
 
 #case-1 .row{
   width: 100%;
