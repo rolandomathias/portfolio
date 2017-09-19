@@ -450,24 +450,27 @@ left:26px;
   max-width: 150px;
   position: relative;
   &:before{
-    content: '';
+    content: '“';
     display: block;
     width: 30px;
     height: 30px;
-    background: url(../img/quotemark.png) center center no-repeat;
     position: absolute;
-    background-size: 100% auto;
-    top: calc(~"50% - 15px");
-    left: -35px;
+    /* background-size: 100% auto; */
+    top: 0;
+    left: -40px;
+    line-height: 62px;
+    font-size: 70px;
+    // font-style: italic;
   }
 }
 
 .header h1{
   font-size: 38px!important;
   line-height: 49.4px!important;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
   span{
-    padding-left: 18px;
+    padding-left: 0px;
     margin-top:0;
   }
 }
@@ -492,12 +495,15 @@ left:26px;
   margin-top:50px;
 }
 
-#case-1 img,#case-2 img{
+#case-1 img,#case-2 img , #case-4 img{
   display: none!important;
 }
-#case-1 .res,#case-2 .res{
+#case-1 .res,#case-2 .res , #case-4 .res{
    display: block!important;
    max-width: 100%;
+}
+#case-1 .res{
+  margin-top:35px;
 }
 
 #case-1 a{
@@ -509,7 +515,7 @@ left:26px;
 }
 
 footer{
-  padding: 0 30px!important;
+  padding: 0 70px!important;
   margin-top:30px;
   padding-bottom: 20px!important;
   .wrap{
@@ -536,6 +542,7 @@ footer .footer-title{
 
 footer ul{
   flex-direction: column;
+  align-items: flex-start;
   li{
     color:#fff;
   }
@@ -574,7 +581,7 @@ footer ul{
   }
 
   .header {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     min-height: 400px;
   }
@@ -778,7 +785,7 @@ footer ul{
           line-height: 27px;
         }
         li + li {
-          margin-top: 24px;
+          margin-top: 5px;
         }
       }
     }
@@ -1135,7 +1142,7 @@ footer ul{
 
 @media (min-width: 1024px) {
   .header {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
   }
   .about-page {
