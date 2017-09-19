@@ -318,7 +318,7 @@ i {
       // max-width: 623px;
       font-family: 'Fira Sans', sans-serif;
       color: #312038;
-      font-size: 19px;
+      font-size: 18px;
     }
     .p-group {
       margin-bottom: 97px;
@@ -349,10 +349,19 @@ i {
 
     &-app{
       display: flex;
+      align-items: center;
       width: 100%;
       margin-top:100px;
-      align-items: center;
       max-width: 80%;
+      overflow: hidden;
+      > img, > p {
+        float: left;
+      }
+      > img{
+        display: block;
+        width: auto;
+        height: auto;
+      }
     }
     &-flight{
       text-align: left;
@@ -416,7 +425,7 @@ i {
           color:#312038;
           line-height: 33.6px;
           margin:0;
-          text-align: justify;
+          text-align: left;
           max-width: 100%;
         }
         span{
