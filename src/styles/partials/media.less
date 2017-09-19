@@ -378,6 +378,17 @@
     margin-bottom:50px;
   }
 
+  .about__content-testimonial.reverse{
+      .about__content-testimonial-text{
+        padding-right: 15px;
+        padding-left: 75px;
+      }
+
+      .about__content-testimonial-text:before{
+        left:20px;
+      }
+  }
+
 }
 
 // Phone landscape and some tablets portrait <= 736px
@@ -600,7 +611,7 @@ footer ul{
   
 
   .about__header-text h2 {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 38.8px;
    }
 
@@ -608,9 +619,8 @@ footer ul{
     font-size: 20px;
     line-height: 25.5px;
     text-align: right;
-    float: left;
+    float: right;
     margin-top: -20px;
-    margin-left: 95px;
   }
 
   .header {
@@ -1059,13 +1069,52 @@ footer ul{
     }
   }
 
+  .about__content-testimonial.reverse{
+    .about__content-testimonial-avatar{
+      margin-left: auto;
+      margin-right:0;
+    }
+    .about__content-testimonial-text span{
+      margin-left:0;
+      margin-right: auto;
+      padding-left: 40px;
+    }
+    .about__content-testimonial-text:before {
+      width: 30px;
+      background-size: 100% auto;
+      top: -7px;
+      left: 0;
+  }
+
+}
+    .home-header{
+      max-width: 100%;
+      width:100%;
+      padding:0 15px!important;
+      font-size:45px!important;
+    }
+
   .hide-me-mobile {
     display: none !important;
   }
 
+  .header h1{
+    font-size: 45px!important;
+  }
+
 }
 
+
+@media (min-width: 400px) {
+  .about__header-text h2{
+    font-size: 44px;
+  }
+  .header h1{
+    font-size: 50px!important;
+  }
+}
 @media (max-width: 480px) {
+ 
   .header {
     h1 {
       .lead {
