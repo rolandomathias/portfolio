@@ -396,6 +396,7 @@
 .classy-body.about {
   padding-right: 0%;
   color: #113558;
+  font-weight: 500;
 }
 
 .classy-container {
@@ -1757,6 +1758,11 @@
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+.text-span-2 {
+  font-style: italic;
+  font-weight: 700;
 }
 
 @media (max-width: 991px) {
